@@ -1,0 +1,90 @@
+/* Spaceship Flight Styles */
+
+.spaceship-flight {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000;
+  padding: 20px;
+}
+
+.flight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+}
+
+.flight-status {
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.flight-status .success {
+  color: #4CAF50;
+  animation: pulse 1s infinite;
+}
+
+.flight-status .crashed {
+  color: #F44336;
+  animation: blink 0.5s infinite;
+}
+
+.game-container {
+  flex: 1;
+  border: 3px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 600px;
+}
+
+.flight-controls {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #333;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.flight-controls p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .flight-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .game-container {
+    min-height: 400px;
+  }
+  
+  .flight-controls p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-container {
+    min-height: 300px;
+  }
+  
+  .flight-controls {
+    padding: 10px;
+  }
+  
+  .flight-controls p {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,173 @@
+/* Deal Decision Styles */
+
+.deal-decision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #001a33;
+  background-image: linear-gradient(to bottom, #001a33, #003366);
+  padding: 20px;
+}
+
+.decision-title {
+  font-size: 2rem;
+  color: #ffcc00;
+  text-shadow: 3px 3px 0 #000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.assessment-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 40px;
+}
+
+.strengths-section, .risks-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.strengths-section h2, .risks-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.strengths-section h2 {
+  color: #4CAF50;
+}
+
+.risks-section h2 {
+  color: #F44336;
+}
+
+.strength-item, .risk-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.strength-item {
+  background-color: rgba(76, 175, 80, 0.1);
+  border-left: 3px solid #4CAF50;
+}
+
+.risk-item {
+  background-color: rgba(244, 67, 54, 0.1);
+  border-left: 3px solid #F44336;
+}
+
+.decision-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.decision-buttons h2 {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.drop-button, .pursue-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.drop-button {
+  background-color: #F44336;
+  color: white;
+}
+
+.drop-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(244, 67, 54, 0.7);
+}
+
+.pursue-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pursue-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
+}
+
+.decision-result {
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #ffcc00;
+  border-radius: 10px;
+  animation: pulse 2s infinite;
+}
+
+.decision-result h2 {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.decision-result p {
+  color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .decision-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .assessment-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .drop-button, .pursue-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .decision-title {
+    font-size: 1.2rem;
+  }
+  
+  .strengths-section h2, .risks-section h2, .decision-buttons h2, .decision-result h2 {
+    font-size: 1.2rem;
+  }
+  
+  .strength-item, .risk-item {
+    font-size: 0.8rem;
+  }
+}

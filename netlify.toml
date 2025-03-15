@@ -1,0 +1,30 @@
+// Netlify configuration file
+// This file configures the build and deployment settings for Netlify
+
+[build]
+  # Directory to publish (the build output)
+  publish = "dist"
+  
+  # Default build command
+  command = "npm run build"
+
+# Redirects and rewrites
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security and caching
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Environment variables (add your own in Netlify dashboard)
+[build.environment]
+  NODE_VERSION = "16.14.0"
+  NPM_VERSION = "8.5.0"
