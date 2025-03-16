@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { setupDealRefresh } from '../actions/dealActions';
+import DataIntegration from './DataIntegration';
 
 // This component doesn't render anything visible
 // It just handles the data integration when the game starts
